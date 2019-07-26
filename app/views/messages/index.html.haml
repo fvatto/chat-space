@@ -37,3 +37,9 @@
         2019/02/13(Wed) 17:50:42
       .message-box__message
         さようなら！
+    .message-form
+      %input.message-input{ type: "text", placeholder: "type a message"}
+      %label.upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o
+        = f.file_field :image, id: "upload-icon"
+      %input.send-button{ type: "submit", value: "Send"}
