@@ -2,7 +2,15 @@
   グループを作成しました
 .menu
   .menu__user
-    test-user
+    %p.menu__user__name
+      test-user
+    %ul.menu__user__icons
+      %li.menu__user__icons__new-group
+        = link_to '#' do
+          %i.fa.fa-edit
+      %li.menu__user__icons__edit-user
+        = link_to '#' do
+          %li.fa.fa-cog    
   %ul.menu__group
     %li.menu__group__list
       test-group
