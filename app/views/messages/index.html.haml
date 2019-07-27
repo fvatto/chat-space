@@ -39,7 +39,7 @@
         さようなら！
     .message-form
       %input.message-input{ type: "text", placeholder: "type a message"}
-      %label.upload-label{for: "upload-icon"}
+      %label.upload-label{ for: "upload-icon"}
         %i.fa.fa-picture-o
-        = f.file_field :image, id: "upload-icon"
+        %input{ type: "file", style: "display: none", id: "upload-icon"}
       %input.send-button{ type: "submit", value: "Send"}
