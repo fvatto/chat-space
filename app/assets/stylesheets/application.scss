@@ -1,3 +1,61 @@
 @import "./reset";
 @import "./variable";
 @import "font-awesome";
+* {
+  box-sizing: border-box;
+}
+.group-create-message {
+  color: white;
+  background-color: #38aef0;
+  font-size: 1rem;
+  text-align: center;
+  width: 100vw;
+}
+
+.menu {
+  width: 300px;
+  color: white;
+  font-weight: bold;
+  float: left;
+  .menu__user {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    p {
+      display: inline-block;
+      font-size: 16px;
+      margin: auto 0;
+    }
+    ul {
+      display: flex;
+      li {
+        margin-left: 0.3rem;
+      }
+    }
+  }
+  .menu__groups {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    .group {
+      .group__name {
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      .group__newest-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  a {
+    color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+}
