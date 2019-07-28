@@ -14,7 +14,7 @@
   color: white;
   font-weight: bold;
   float: left;
-  .menu__user {
+  &__user {
     background-color: #253141;
     height: 100px;
     display: flex;
@@ -38,11 +38,11 @@
     background-color: #2f3e51;
     padding: 20px 20px 0;
     .group {
-      .group__name {
+      &__name {
         font-size: 15px;
         padding-bottom: 5px;
       }
-      .group__newest-message {
+      &__newest-message {
         font-size: 11px;
         margin-bottom: 40px;
       }
