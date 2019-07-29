@@ -10,20 +10,23 @@
           %i.fa.fa-edit
       %li.menu__user__icons__edit-user
         = link_to '#' do
-          %li.fa.fa-cog    
-  %ul.menu__group
-    %li.menu__group__list
-      test-group
-    .test__group--newest-message
-      さようなら！
-    %li.menu__group__list
-      sample-group
-    .test__group--newest-message
-      hello!
-    %li.menu__group__list
-      example
-    .test__group--newest-message
-      まだメッセージがありません
+          %li.fa.fa-cog
+  .menu__groups
+    = link_to '#',class: "group" do
+      %p.group__name
+        test-group
+      %p.group__newest-message
+        さようなら！
+    = link_to '#',class: "group" do
+      %p.group__name
+        sample-group
+      %p.group__newest-message
+        hello!
+    = link_to '#',class: "group" do
+      %p.group__name
+        example
+      %p.group__newest-message
+        まだメッセージがありません
 .message-monitor
   .group-details
     .group-details__title
