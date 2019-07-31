@@ -12,7 +12,7 @@
         = link_to '#' do
           %li.fa.fa-cog
   .menu__groups
-    = render partial = "group"
+    = render partial: 'group'
 .message-monitor
   .group-details
     .group-block
@@ -22,7 +22,7 @@
         Member:test-user
     = link_to 'Edit', '#', class: "edit-button"
   .message-details
-    = render partial = "message"
+    = render partial: 'message'
   .message-form
     .input-box
       %input.input-box__text{ type: "text", placeholder: "type a message"}
