@@ -12,45 +12,21 @@
         = link_to '#' do
           %li.fa.fa-cog
   .menu__groups
-    = link_to '#',class: "group" do
-      %p.group__name
-        test-group
-      %p.group__newest-message
-        さようなら！
-    = link_to '#',class: "group" do
-      %p.group__name
-        sample-group
-      %p.group__newest-message
-        hello!
-    = link_to '#',class: "group" do
-      %p.group__name
-        example
-      %p.group__newest-message
-        まだメッセージがありません
+    = render partial = "group"
 .message-monitor
   .group-details
-    .group-details__title
-      test-group
-    .group-details__member
-      Member:test-user
+    .group-block
+      .group-block__title
+        test-group
+      .group-block__member
+        Member:test-user
     = link_to 'Edit', '#', class: "edit-button"
   .message-details
-    .message-box
-      .message-box__user
-        test_user  
-      %span.message-box__time
-        2019/02/13(Wed) 17:50:36
-      .message-box__message
-        こんにちは！
-      .message-box__user
-        test_user  
-      %span.message-box__time
-        2019/02/13(Wed) 17:50:42
-      .message-box__message
-        さようなら！
-    .message-form
-      %input.message-input{ type: "text", placeholder: "type a message"}
-      %label.upload-label{ for: "upload-icon"}
-        %i.fa.fa-picture-o
-        %input{ type: "file", style: "display: none", id: "upload-icon"}
+    = render partial = "message"
+  .message-form
+    .input-box
+      %input.input-box__text{ type: "text", placeholder: "type a message"}
+        %label.input-box__label{ for: "upload-icon"}
+          %i.fa.fa-picture-o
+          %input{ type: "file", style: "display: none", id: "upload-icon"}
       %input.send-button{ type: "submit", value: "Send"}
