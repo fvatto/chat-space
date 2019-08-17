@@ -1,0 +1,13 @@
+.menu
+  .menu__user
+    %p.menu__user__name
+      = current_user.name
+    %ul.menu__user__icons
+      %li.menu__user__icons__new-group
+        = link_to new_group_path do
+          %i.fa.fa-edit
+      %li.menu__user__icons__edit-user
+        = link_to edit_user_path(current_user) do
+          %i.fa.fa-cog
+  .menu__groups
+    = render partial: '/groups/group'

@@ -1,16 +1,11 @@
 .message
   .message-about
     .message-about__user
-      test_user  
+      = message.user.name
     %span.message-about__time
-      2019/02/13(Wed) 17:50:36
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   .message__message
-    こんにちは！
-.message
-  .message-about
-    .message-about__user
-      test_user  
-    %span.message-about__time
-      2019/02/13(Wed) 17:50:42
-  .message__message
-    さようなら！   
+    - if message.content.present?
+      %p.message__message__content
+        = message.content  
+    = image_tag message.image.url, class: 'message__message__image' if message.image.present?
