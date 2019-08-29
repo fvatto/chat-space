@@ -1,4 +1,4 @@
-.message
+.message{data: "#{message.id}"}
   .message-about
     .message-about__user
       = message.user.name
@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.message__message__content
         = message.content  
-    = image_tag message.image.url, class: 'message__message__image' if message.image.present?
+    = image_tag message.image, class: 'message__message__image' if message.image.present?
