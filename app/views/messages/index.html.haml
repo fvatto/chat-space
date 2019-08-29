@@ -12,12 +12,11 @@
     = link_to 'Edit', edit_group_path(@group), class: "edit-button"
   .message-details
     = render @messages
-  .message-form
-    = form_for [@group, @message] do |f|
-      = f.hidden_field :user_id, value: "#{@message.user_id}"
-      = f.text_field :content, autofocus: true, class: 'message-form__text', placeholder: 'type a message'
-      .message-form__mask
-        = f.label :image, class: 'message-form__mask__label' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden', style: "display:none"
-      = f.submit 'Send', class: 'send-button'
+  = form_for [@group, @message], html: {class: 'message-form'} do |f|
+    = f.hidden_field :user_id, value: "#{@message.user_id}"
+    = f.text_field :content, autofocus: true, class: 'message-form__text', placeholder: 'type a message'
+    .message-form__mask
+      = f.label :image, class: 'message-form__mask__label' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden', style: "display:none"
+    = f.submit 'Send', class: 'send-button'

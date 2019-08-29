@@ -41,8 +41,7 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.message-details').append(html);
-      $('.message-form__text').val('');
-      $('.hidden').val('');
+      $('.message-form')[0].reset();
       $('.send-button').prop('disabled', false);
       $('.message-details').animate({scrollTop: $('.message-details')[0].scrollHeight}, 'fast');
     })
