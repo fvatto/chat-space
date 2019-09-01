@@ -70,7 +70,7 @@ $(function() {
         $('.message-details').animate({scrollTop: $('.message-details')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log('error');
+        alert('メッセージの自動更新に失敗しました');
       });
     }
   };
